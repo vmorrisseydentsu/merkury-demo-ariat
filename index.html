@@ -184,7 +184,7 @@ img{display:block;width:100%;height:100%;object-fit:cover;}
 .cat-section-hdr{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:28px;}
 .cat-section-hdr h2{font-family:var(--font);font-size:26px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0d0d0d;}
 .cat-section-hdr a{font-size:13px;color:var(--text2);text-decoration:underline;cursor:pointer;}
-.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.cat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;}
 .cat-tile{cursor:pointer;}
 .cat-photo{aspect-ratio:3/4;overflow:hidden;position:relative;}
 .cat-badge{position:absolute;bottom:12px;left:12px;background:rgba(255,255,255,.92);padding:4px 10px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;border-radius:2px;}
@@ -600,35 +600,35 @@ footer{background:#fff;padding:40px 0 0;}
 .itp-resolve-time{color:#00c8a0;font-weight:700;}
 
 /* RETAIL CONCIERGE */
-#chat-bubble{position:fixed;bottom:72px;right:24px;z-index:7500;background:var(--teal);color:#fff;border:none;padding:12px 20px;font-size:13px;font-weight:600;font-family:var(--font);cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:0 4px 24px rgba(0,0,0,.3);transition:background .15s;white-space:nowrap;}
+#chat-bubble{display:none!important;}
 #chat-bubble:hover{background:var(--teal-h);}
 #chat-bubble .cb-dot{width:8px;height:8px;border-radius:50%;background:#00e8a8;flex-shrink:0;animation:psDotPulse 2s ease-in-out infinite;}
-#chat-window{display:none;position:fixed;bottom:120px;right:24px;z-index:7501;width:360px;max-height:520px;background:#fff;box-shadow:0 16px 48px rgba(0,0,0,.22);flex-direction:column;overflow:hidden;}
+#chat-window{display:none!important;}
 #chat-window.open{display:flex;}
-.chat-header{background:#0d0d0d;padding:14px 18px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
-.chat-header-icon{width:32px;height:32px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-family:var(--font);font-size:12px;font-weight:700;color:#fff;flex-shrink:0;}
-.chat-header-info{flex:1;}
-.chat-header-name{font-family:var(--font);font-size:13px;font-weight:700;color:#fff;}
-.chat-header-sub{font-size:11px;color:rgba(255,255,255,.5);margin-top:1px;}
-.chat-header-close{font-size:20px;color:rgba(255,255,255,.5);cursor:pointer;background:none;border:none;line-height:1;}
+
+
+
+
+
+
 .chat-header-close:hover{color:#fff;}
-.chat-context-bar{background:var(--off);border-bottom:1px solid var(--border);padding:8px 14px;font-size:11px;color:var(--text3);display:flex;align-items:center;gap:6px;flex-shrink:0;}
-.chat-context-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;}
-.chat-context-text{font-weight:600;color:#0d0d0d;}
-.chat-messages{flex:1;overflow-y:auto;padding:16px 14px;display:flex;flex-direction:column;gap:12px;min-height:200px;}
-.chat-msg{display:flex;flex-direction:column;max-width:85%;}
+
+
+
+
+
 .chat-msg.bot{align-self:flex-start;}
 .chat-msg.user{align-self:flex-end;}
-.chat-msg-bubble{padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.55;}
-.chat-msg.bot .chat-msg-bubble{background:#f0f0f0;color:#1a1a1a;border-radius:14px 14px 14px 3px;}
-.chat-msg.user .chat-msg-bubble{background:#0d0d0d;color:#fff;border-radius:14px 14px 3px 14px;}
-.chat-replies{display:flex;flex-direction:column;gap:6px;align-self:flex-start;width:100%;margin-top:4px;}
-.chat-reply-btn{background:#fff;border:1.5px solid var(--border);padding:8px 14px;font-size:12px;font-family:var(--font);color:var(--text);cursor:pointer;text-align:left;transition:all .15s;line-height:1.4;}
+
+.chat-msg.bot 
+.chat-msg.user 
+
+
 .chat-reply-btn:hover{border-color:#0d0d0d;background:#f7f4f0;}
-.chat-input-row{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--border);flex-shrink:0;background:#fff;}
-.chat-input{flex:1;border:1.5px solid var(--border);padding:9px 14px;font-size:13px;font-family:var(--font);color:var(--text);outline:none;transition:border-color .15s;}
+
+
 .chat-input:focus{border-color:#0d0d0d;}
-.chat-send{background:#0d0d0d;color:#fff;border:none;padding:9px 18px;font-size:13px;font-weight:600;font-family:var(--font);cursor:pointer;white-space:nowrap;}
+
 .chat-send:hover{background:#333;}
 
 /* PERSONA SWITCHER */
@@ -737,8 +737,8 @@ footer{background:#fff;padding:40px 0 0;}
   #ps-toggle{font-size:11px;padding:8px 12px;}
   #ps-panel{width:calc(100vw - 24px);right:0;}
   #sticky-20-btn{bottom:12px;left:12px;font-size:11px;padding:8px 12px;}
-  #chat-bubble{bottom:58px;right:12px;font-size:12px;padding:9px 14px;}
-  #chat-window{width:calc(100vw - 24px);right:12px;bottom:104px;max-height:55vh;}
+  #chat-bubble{display:none!important;}
+  #chat-window{display:none!important;}
   #id-timeline-btn{top:88px;padding:9px 7px;font-size:9px;}
   #id-timeline-panel{width:min(280px,88vw);}
   .pers-modal{max-width:calc(100vw - 24px);}
@@ -861,16 +861,41 @@ footer{background:#fff;padding:40px 0 0;}
 #hero-cta1{display:none!important;}
 
 /* Home category tiles */
-.g-ranch{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_600/dpr_auto,q_auto/HP_Category_Funnel_04012026_D") center/cover no-repeat;}
-.g-tan{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_600/dpr_auto,q_auto/HP_Category_Funnel_04012026_D_2") center/cover no-repeat;}
-.g-forest{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_600/dpr_auto,q_auto/HP_Category_Funnel_04152026_D") center/cover no-repeat;}
-.g-denim{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_600/dpr_auto,q_auto/HP_Category_Funnel_04012026_D_4") center/cover no-repeat;}
-.g-rust{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_600/dpr_auto,q_auto/Category_Funnel_Desktop_4") center/cover no-repeat;}
-.g-desert{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_600/dpr_auto,q_auto/HP_Category_Funnel_04012026_D_5") center/cover no-repeat;}
-.g-sage{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_600/dpr_auto,q_auto/HP_Category_Funnel_04012026_D") center/cover no-repeat;}
-.g-night{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_600/dpr_auto,q_auto/HP_Category_Funnel_04012026_D_2") center/cover no-repeat;}
+
+
+
+
+
+
+
+
 
 /* Product grid — women's shots (default/VIP/Prospect) */
+
+
+
+
+
+
+
+
+
+/* Product grid — men's shots (Jake/Lapsed) */
+
+
+
+
+
+
+
+.pb-photo{overflow:hidden;background:url("https://res.cloudinary.com/ariat-media/image/upload/c_fill,g_auto,w_1120/dpr_auto,q_auto/CLP_Mens_S26_D") center/cover no-repeat;}
+.life-main{position:relative;overflow:hidden;cursor:pointer;background:url("https://res.cloudinary.com/ariat-media/image/upload/c_fill,w_1920/dpr_auto,q_auto/Hero_Stagecoach_04012026_D") center/cover no-repeat;}
+.pdp-photo-main{aspect-ratio:3/4;overflow:hidden;grid-column:span 2;background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw96ea37c7/images/warm/10081840_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
+.pdp-photo-thumb{aspect-ratio:3/4;overflow:hidden;background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dwf94447e6/images/warm/10072964_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
+.email-product-img{background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw96ea37c7/images/warm/10081840_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;min-height:160px;}
+/* === END ARIAT IMAGE CSS === */
+
+/* ARIAT PRODUCT + CATEGORY IMAGES */
 .grad-1{background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw96ea37c7/images/warm/10081840_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
 .grad-2{background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dwf94447e6/images/warm/10072964_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
 .grad-3{background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dwf401e0c7/images/warm/10072962_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
@@ -879,21 +904,25 @@ footer{background:#fff;padding:40px 0 0;}
 .grad-6{background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw70384ab8/images/warm/10074354_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
 .grad-7{background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw96ea37c7/images/warm/10081840_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
 .grad-8{background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dwf94447e6/images/warm/10072964_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
-
-/* Product grid — men's shots (Jake/Lapsed) */
 .grad-m1{background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw670128d0/images/warm/10074282_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
 .grad-m2{background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw41989bea/images/warm/10074280_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
 .grad-m3{background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw19315742/images/warm/10074281_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
 .grad-m4{background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw4f370b55/images/warm/10074189_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
 .grad-m5{background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw59afa438/images/warm/10074166_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
 .grad-m6{background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dwe29ef89f/images/warm/10071192_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
-
+.g-ranch{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_265/dpr_auto,q_auto/HP_Category_Funnel_04012026_D") center/cover no-repeat;}
+.g-tan{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_265/dpr_auto,q_auto/HP_Category_Funnel_04012026_D_2") center/cover no-repeat;}
+.g-forest{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_265/dpr_auto,q_auto/HP_Category_Funnel_04152026_D") center/cover no-repeat;}
+.g-denim{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_265/dpr_auto,q_auto/HP_Category_Funnel_04012026_D_4") center/cover no-repeat;}
+.g-rust{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_265/dpr_auto,q_auto/Category_Funnel_Desktop_4") center/cover no-repeat;}
+.g-desert{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_265/dpr_auto,q_auto/HP_Category_Funnel_04012026_D_5") center/cover no-repeat;}
+.g-sage{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_265/dpr_auto,q_auto/HP_Category_Funnel_04012026_D") center/cover no-repeat;}
+.g-night{background:url("https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_265/dpr_auto,q_auto/HP_Category_Funnel_04012026_D_2") center/cover no-repeat;}
 .pb-photo{overflow:hidden;background:url("https://res.cloudinary.com/ariat-media/image/upload/c_fill,g_auto,w_1120/dpr_auto,q_auto/CLP_Mens_S26_D") center/cover no-repeat;}
 .life-main{position:relative;overflow:hidden;cursor:pointer;background:url("https://res.cloudinary.com/ariat-media/image/upload/c_fill,w_1920/dpr_auto,q_auto/Hero_Stagecoach_04012026_D") center/cover no-repeat;}
 .pdp-photo-main{aspect-ratio:3/4;overflow:hidden;grid-column:span 2;background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw96ea37c7/images/warm/10081840_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
 .pdp-photo-thumb{aspect-ratio:3/4;overflow:hidden;background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dwf94447e6/images/warm/10072964_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
 .email-product-img{background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw96ea37c7/images/warm/10081840_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;min-height:160px;}
-/* === END ARIAT IMAGE CSS === */
 </style>
 </head>
 <body>
@@ -935,20 +964,8 @@ footer{background:#fff;padding:40px 0 0;}
 </div>
 
 <!-- RETAIL CONCIERGE -->
-<button id="chat-bubble" onclick="toggleChat()"><div class="cb-dot"></div><span>Boot Concierge</span></button>
-<div id="chat-window">
-  <div class="chat-header">
-    <div class="chat-header-icon">A</div>
-    <div class="chat-header-info"><div class="chat-header-name">Ariat Boot Concierge</div><div class="chat-header-sub">Personalized by Merkury</div></div>
-    <button class="chat-header-close" onclick="toggleChat()">&#215;</button>
-  </div>
-  <div class="chat-context-bar"><div class="chat-context-dot"></div>Shopping as: <span class="chat-context-text" id="chat-context-label">Guest</span></div>
-  <div class="chat-messages" id="chat-messages"></div>
-  <div class="chat-input-row">
-    <input class="chat-input" id="chat-input" type="text" placeholder="Ask me anything..." onkeydown="if(event.key==='Enter')sendChat()">
-    <button class="chat-send" id="chat-send-btn" onclick="sendChat()">Send</button>
-  </div>
-</div>
+
+
 
 <!-- EMAIL MODAL -->
 <div id="email-modal-overlay">
@@ -1059,8 +1076,8 @@ footer{background:#fff;padding:40px 0 0;}
         <div class="cm-section-label">AI Copy Assistant</div>
         <div class="cm-ai-bar"><div class="cm-ai-bar-label">AI copy assistant</div><div class="cm-tone-pills"><button class="cm-tone-pill" onclick="setCmTone(this,'shorter')">Make shorter</button><button class="cm-tone-pill active" onclick="setCmTone(this,'urgent')">Add urgency</button><button class="cm-tone-pill" onclick="setCmTone(this,'casual')">Make casual</button></div></div>
         <div class="cm-variants">
-          <div class="cm-variant active" onclick="selectVariant(this,0)"><div class="cm-variant-label">Variant A</div><div class="cm-variant-text" id="cv-text-0">Ariat: Hey Insider! 5 months &mdash; we miss you. New western boots + 20% off just for you &rarr; ariat.com/insider Code: INSIDER20</div><div class="cm-add-msg">+ Add message</div></div>
-          <div class="cm-variant" onclick="selectVariant(this,1)"><div class="cm-variant-label">Variant B</div><div class="cm-variant-text" id="cv-text-1">Ariat: Your 20% off is waiting, Insider. The boots you love are back &rarr; ariat.com/insider Code: INSIDER20</div><div class="cm-add-msg">+ Add message</div></div>
+          <div class="cm-variant active" onclick="selectVariant(this,0)"><div class="cm-variant-label">Variant A</div><div class="cm-variant-text" id="cv-text-0">Ariat: Jake, it's been 5 months &mdash; we miss you. New western boots just dropped + 20% off just for you &rarr; ariat.com/insider Code: INSIDER20</div><div class="cm-add-msg">+ Add message</div></div>
+          <div class="cm-variant" onclick="selectVariant(this,1)"><div class="cm-variant-label">Variant B</div><div class="cm-variant-text" id="cv-text-1">Ariat: Jake, your 20% off is waiting. The boots you love are back &rarr; ariat.com/insider Code: INSIDER20</div><div class="cm-add-msg">+ Add message</div></div>
         </div>
         <div class="cm-section-label">Send Time</div>
         <div class="cm-sendtime">
@@ -1070,7 +1087,7 @@ footer{background:#fff;padding:40px 0 0;}
       </div>
       <div class="cm-right">
         <div class="cm-section-label" style="align-self:flex-start;margin-bottom:12px;">Preview</div>
-        <div class="cm-phone"><div class="cm-phone-screen"><div class="cm-phone-notch"></div><div class="cm-phone-status"><span class="cm-phone-status-time">9:41</span></div><div class="cm-phone-header"><div class="cm-phone-avatar"><svg viewBox="0 0 40 40"><path d="M20 4 L24 14 L34 10 L28 20 L34 30 L24 26 L20 36 L16 26 L6 30 L12 20 L6 10 L16 14 Z" fill="white"/></svg></div><div class="cm-phone-sender">Ariat</div><div class="cm-phone-type">Text Message</div></div><div class="cm-phone-thread"><div class="cm-phone-bubble" id="cm-phone-preview">Ariat: Hey Insider! New western boots + 20% off &rarr; ariat.com/insider Code: INSIDER20</div></div></div></div>
+        <div class="cm-phone"><div class="cm-phone-screen"><div class="cm-phone-notch"></div><div class="cm-phone-status"><span class="cm-phone-status-time">9:41</span></div><div class="cm-phone-header"><div class="cm-phone-avatar"><svg viewBox="0 0 40 40"><path d="M20 4 L24 14 L34 10 L28 20 L34 30 L24 26 L20 36 L16 26 L6 30 L12 20 L6 10 L16 14 Z" fill="white"/></svg></div><div class="cm-phone-sender">Ariat</div><div class="cm-phone-type">Text Message</div></div><div class="cm-phone-thread"><div class="cm-phone-bubble" id="cm-phone-preview">Ariat: Jake, it's been 5 months - new western boots + 20% off just for you! Code: INSIDER20</div></div></div></div>
         <div class="cm-perf-card"><div class="cm-perf-label">Est. Performance</div><div class="cm-perf-row"><span>Audience size</span><strong>3,847</strong></div><div class="cm-perf-row"><span>Est. click rate</span><strong>19–26%</strong></div><div class="cm-perf-row green"><span>Est. revenue</span><strong>$14,200–$21,800</strong></div></div>
       </div>
     </div>
@@ -1142,13 +1159,13 @@ footer{background:#fff;padding:40px 0 0;}
       <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:12px;">Merkury Signals — DSP Partner</div>
       <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
         <span style="background:var(--off);border:1px solid var(--border);padding:4px 12px;font-size:11px;font-weight:600;color:var(--text2);">category_affinity_1: Western Boots</span>
-        <span style="background:var(--off);border:1px solid var(--border);padding:4px 12px;font-size:11px;font-weight:600;color:var(--text2);">swim_propensity_score: 82</span>
-        <span style="background:var(--off);border:1px solid var(--border);padding:4px 12px;font-size:11px;font-weight:600;color:var(--text2);">swim_in_market: Y</span>
+        <span style="background:var(--off);border:1px solid var(--border);padding:4px 12px;font-size:11px;font-weight:600;color:var(--text2);">boots_propensity_score: 82</span>
+        <span style="background:var(--off);border:1px solid var(--border);padding:4px 12px;font-size:11px;font-weight:600;color:var(--text2);">boots_in_market: Y</span>
         <span style="background:var(--off);border:1px solid var(--border);padding:4px 12px;font-size:11px;font-weight:600;color:var(--text2);">confidence_score: 4</span>
         <span style="background:var(--off);border:1px solid var(--border);padding:4px 12px;font-size:11px;font-weight:600;color:var(--text2);">match_type: probabilistic</span>
       </div>
       <div style="font-size:12px;color:var(--text3);line-height:1.6;background:var(--off);padding:12px 14px;">
-        Danielle has never purchased swim at Ariat — but Merkury's 3P graph detected a swim propensity score of 82 based on browsing and purchase signals across the open web. This display ad targets her via DSP without requiring her email or identity match.
+        Danielle has never purchased swim at Ariat — but Merkury's modeled graph identified a high-propensity western boot buyer based on browsing and purchase signals across the open web. This display ad targets Caitlin via DSP using the Merkury HMID — no email or CRM record required.
       </div>
     </div>
   </div>
@@ -1248,7 +1265,7 @@ footer{background:#fff;padding:40px 0 0;}
           <button class="ps-int-tab-btn" style="background:rgba(107,124,74,.15);color:#b8cc88;" onclick="openOfferLightbox()"><span class="ps-int-icon">🏷️</span>On-site Offer — 20% Off</button>
         </div>
         <div id="int-btn-danielle" style="display:none;">
-          <button class="ps-int-tab-btn" style="background:rgba(107,74,170,.15);color:#c8a8ff;" onclick="openDisplayAdModal()"><span class="ps-int-icon">🖥️</span>Display Ad — Swim Cross-Sell</button>
+          <button class="ps-int-tab-btn" style="background:rgba(107,74,170,.15);color:#c8a8ff;" onclick="openDisplayAdModal()"><span class="ps-int-icon">🖥️</span>Display Ad — New Visitor — Western Boot</button>
           <button class="ps-int-tab-btn" style="background:rgba(107,124,74,.15);color:#b8cc88;" onclick="openOfferLightbox()"><span class="ps-int-icon">🏷️</span>On-site Offer — Swim 20% Off</button>
         </div>
         <div style="border-top:1px solid rgba(255,255,255,.08);padding:8px 10px;">
@@ -1282,6 +1299,22 @@ footer{background:#fff;padding:40px 0 0;}
     </div>
   </div></div>
 
+
+  <!-- 6-TILE CATEGORY GRID — matches Ariat.com home -->
+  <div style="padding:40px 48px 32px;border-bottom:1px solid var(--border);background:#fff;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px;">
+      <h2 style="font-size:16px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;" id="home-cat-title">SHOP THE COLLECTION</h2>
+      <a onclick="showPage('category')" style="font-size:13px;color:var(--text2);text-decoration:underline;cursor:pointer;">View All</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px;" id="home-cat-grid">
+      <div class="cat-tile" onclick="showPage('category')"><div style="background:url('https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_265/dpr_auto,q_auto/HP_Category_Funnel_04012026_D') center/cover no-repeat;aspect-ratio:3/4;position:relative;"><div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.6));"></div><div style="position:absolute;bottom:10px;left:10px;font-size:12px;font-weight:700;color:#fff;line-height:1.3;">Women's Boots &amp; Shoes</div></div></div>
+      <div class="cat-tile" onclick="showPage('category')"><div style="background:url('https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_265/dpr_auto,q_auto/HP_Category_Funnel_04012026_D_2') center/cover no-repeat;aspect-ratio:3/4;position:relative;"><div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.6));"></div><div style="position:absolute;bottom:10px;left:10px;font-size:12px;font-weight:700;color:#fff;line-height:1.3;">Men's Boots &amp; Shoes</div></div></div>
+      <div class="cat-tile" onclick="showPage('category')"><div style="background:url('https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_265/dpr_auto,q_auto/HP_Category_Funnel_04152026_D') center/cover no-repeat;aspect-ratio:3/4;position:relative;"><div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.6));"></div><div style="position:absolute;bottom:10px;left:10px;font-size:12px;font-weight:700;color:#fff;line-height:1.3;">Women's Clothing</div></div></div>
+      <div class="cat-tile" onclick="showPage('category')"><div style="background:url('https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_265/dpr_auto,q_auto/HP_Category_Funnel_04012026_D_4') center/cover no-repeat;aspect-ratio:3/4;position:relative;"><div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.6));"></div><div style="position:absolute;bottom:10px;left:10px;font-size:12px;font-weight:700;color:#fff;line-height:1.3;">Men's Clothing</div></div></div>
+      <div class="cat-tile" onclick="showPage('category')"><div style="background:url('https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_265/dpr_auto,q_auto/Category_Funnel_Desktop_4') center/cover no-repeat;aspect-ratio:3/4;position:relative;"><div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.6));"></div><div style="position:absolute;bottom:10px;left:10px;font-size:12px;font-weight:700;color:#fff;line-height:1.3;">Jeans</div></div></div>
+      <div class="cat-tile" onclick="showPage('category')"><div style="background:url('https://res.cloudinary.com/ariat-media/image/upload/ar_3:4,c_fill,g_auto,w_265/dpr_auto,q_auto/HP_Category_Funnel_04012026_D_5') center/cover no-repeat;aspect-ratio:3/4;position:relative;"><div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.6));"></div><div style="position:absolute;bottom:10px;left:10px;font-size:12px;font-weight:700;color:#fff;line-height:1.3;">Workwear &amp; Boots</div></div></div>
+    </div>
+  </div>
 
   <div class="promo-band"><div class="promo-band-inner">
     <div class="pb-photo"></div>
@@ -1646,40 +1679,34 @@ document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)
 var PAYLOADS={
   def:{d:{response:'no_match',version:'1.0.0',data:{}}},
   maya:{d:{response:'match',version:'1.0.0',data:{
-    'dentsu.id':'DID-9C1F03D82247',hashed_email:'f84c2a1b09de',CRM_ID:'ARI-00218847',
+    'dentsu.id':'DID-9C1F03D82247',hmid:'HMID-9C1F03D82247F',uuid:'SFMC-00218847-A4F2',
+    email_enc:'c2FyYWgua0BuYXNodmlsbGUuY29t',email_sha256_hashed:'f84c2a9e1b09de3a7c52...sha256',
     confidence_score:1,match_type:'deterministic',first_name:'Sarah',last_name:'K.',
-    age_range:'25-34',gender:'F',city:'Nashville',state:'TN',
-    household_income_range:'$100K-$149K',homeowner_flag:'H',
-    purchase_frequency:'Frequent',last_purchase_days:22,
-    category_affinity_1:"Women's Western Boots",category_affinity_2:"Women's Apparel",
-    in_market_flag:'Y',lifestyle_segment:'Equestrian Lifestyle',
-    brand_loyalty_score:94,email_engagement:'Active',
-    loyalty_tier:'VIP',loyalty_status:'active',loyalty_points:1840,
-    email_addr:'sarah.k@nashville.com'
+    age_range:'age_band_3',gender:'gender_F',city:'Nashville',state:'TN',homeowner_flag:'H',
+    household_income_range:'hhi_band_6',purchase_frequency:'pf_high',last_purchase_days:22,
+    category_affinity_1:'cat_western_boots_womens',category_affinity_2:'cat_apparel_womens',
+    in_market_flag:'Y',lifestyle_segment:'ls_equestrian_lifestyle',brand_loyalty_score:94,
+    email_engagement:'ee_active',loyalty_tier:'loyalty_vip',loyalty_status:'ls_active',loyalty_points:1840
   }}},
   jennifer:{d:{response:'match',version:'1.0.0',data:{
-    'dentsu.id':'DID-2B8D54E71109',hashed_email:'a3f2c1b8e44bb',CRM_ID:'ARI-00419283',
-    confidence_score:2,match_type:'probabilistic',first_name:'Jake',last_name:'M.',
-    age_range:'35-44',gender:'M',city:'Denver',state:'CO',
-    household_income_range:'$75K-$99K',homeowner_flag:'H',
-    purchase_frequency:'Occasional',last_purchase_days:147,
-    category_affinity_1:"Men's Western Boots",category_affinity_2:'Workwear',
-    in_market_flag:'Y',lifestyle_segment:'Ranch Professional',
-    brand_loyalty_score:62,email_engagement:'Lapsed',
-    loyalty_tier:'Insider',loyalty_status:'lapsed',loyalty_points:840,
-    email_addr:'insider@denver.com'
+    'dentsu.id':'DID-2B8D54E71109',hmid:'HMID-2B8D54E71109C',uuid:'SFMC-00419283-B7D1',
+    email_enc:null,email_sha256_hashed:'a3f2c1b8e44bb9d72c85...sha256',
+    confidence_score:2,match_type:'probabilistic',first_name:null,last_name:null,
+    age_range:'age_band_4',gender:'gender_M',city:'Denver',state:'CO',homeowner_flag:'H',
+    household_income_range:'hhi_band_5',purchase_frequency:'pf_occasional',last_purchase_days:147,
+    category_affinity_1:'cat_western_boots_mens',category_affinity_2:'cat_workwear_mens',
+    in_market_flag:'Y',lifestyle_segment:'ls_ranch_professional',brand_loyalty_score:62,
+    email_engagement:'ee_lapsed',loyalty_tier:'loyalty_insider',loyalty_status:'ls_lapsed',loyalty_points:840
   }}},
   danielle:{d:{response:'match',version:'1.0.0',data:{
-    'dentsu.id':'DID-7F3A29C10041',hashed_email:null,CRM_ID:null,
-    confidence_score:3,match_type:'modeled',first_name:'Caitlin',last_name:'R.',
-    age_range:'25-34',gender:'F',city:'Dallas',state:'TX',
-    household_income_range:'$50K-$74K',homeowner_flag:'R',
-    purchase_frequency:null,last_purchase_days:null,
-    category_affinity_1:'Western Boots',category_affinity_2:'Apparel',
-    in_market_flag:'Y',lifestyle_segment:'Western Enthusiast',
-    brand_loyalty_score:null,email_engagement:null,
-    loyalty_tier:null,loyalty_status:null,loyalty_points:null,
-    email_addr:null
+    'dentsu.id':'DID-7F3A29C10041',hmid:'HMID-7F3A29C10041D',uuid:null,
+    email_enc:null,email_sha256_hashed:null,
+    confidence_score:3,match_type:'modeled',first_name:null,last_name:null,
+    age_range:'age_band_3',gender:'gender_F',city:'Dallas',state:'TX',homeowner_flag:'R',
+    household_income_range:'hhi_band_4',purchase_frequency:null,last_purchase_days:null,
+    category_affinity_1:'cat_western_boots_womens',category_affinity_2:'cat_apparel_womens',
+    in_market_flag:'Y',lifestyle_segment:'ls_western_enthusiast',brand_loyalty_score:null,
+    email_engagement:null,loyalty_tier:null,loyalty_status:null,loyalty_points:null
   }}}
 };
 
@@ -1691,7 +1718,7 @@ var CONTENT={
 };
 
 var MODALS={
-  maya:{headerBg:'linear-gradient(135deg,#1a1a2a,#0d0d1a)',visitorState:'Deterministic Match \u2014 VIP Insider',tagline:'Sarah K. \u00B7 Nashville, TN \u00B7 Authenticated',matchBadge:'Deterministic Match \u2014 Confidence 1',matchType:'Deterministic',matchClass:'det',confidence:'1 - Highest',offerBg:'#1a1a2a',offerHeader:'VIP Insider \u2014 Exclusive Access',offerHeadline:'VIP early access is live.',offerDesc:'Sarah, your 1,840 points and 15% off are active. First look at Spring Western.',offerCode:'AUTO-APPLIED'},
+  maya:{headerBg:'linear-gradient(135deg,#1a1a2a,#0d0d1a)',visitorState:'Deterministic Match \u2014 VIP Insider',tagline:'Sarah K. \u00B7 Nashville, TN \u00B7 Authenticated',matchBadge:'Deterministic Match \u2014 Confidence 1',matchType:'Deterministic',matchClass:'det',confidence:'1 - Highest',offerBg:'#1a1a2a',offerHeader:'VIP Insider \u2014 Exclusive Access',offerHeadline:'VIP early access is live.',offerDesc:'Sarah, your 1,840 points and 15% off are active. First look at Spring Western.',offerCode:'VIP15'},
   jennifer:{headerBg:'linear-gradient(135deg,#2a3a5a,#1a2a4a)',visitorState:'Probabilistic Match \u2014 Lapsed Insider',tagline:'Jake M. \u00B7 Ranch Professional \u00B7 Denver, CO',matchBadge:'Probabilistic Match \u2014 Confidence 2',matchType:'Probabilistic',matchClass:'prob',confidence:'2 - Probabilistic',offerBg:'#2a3a2a',offerHeader:'Welcome Back \u2014 Win-Back',offerHeadline:'20% off to welcome you back.',offerDesc:"147 days since last purchase. Ariat Insider status still active. 20% off your next order.",offerCode:'INSIDER20'},
   danielle:{headerBg:'linear-gradient(135deg,#C85A1A,#7a3510)',visitorState:'Modeled Match \u2014 Net New Visitor',tagline:'Caitlin R. \u00B7 Western Enthusiast \u00B7 Dallas, TX',matchBadge:'Modeled Match \u2014 Confidence 3',matchType:'Modeled',matchClass:'prob',confidence:'3 - Modeled',offerBg:'#3d2010',offerHeader:'First-Time Offer \u2014 New Visitor',offerHeadline:'Your first pair, 10% off.',offerDesc:'Welcome to Ariat. Sign up and unlock 10% off your first western boot order.',offerCode:'NEWRIDER10'}
 };
@@ -1732,15 +1759,15 @@ var CONF_EXPLAIN={
 
 var CART_CONFIG={
   def:{itemName:'Unbridled Westin Cowboy Boot',itemDetail:'Size: 8 - Color: Distressed Brown - Qty: 1',itemPrice:'$229.95',itemMember:'Join Insider for member pricing',itemGrad:'grad-1',pointsText:'<strong>Join Ariat Insider free</strong> \u2014 earn points and get free shipping.',recsTitle:"You Might Also Love",subtotal:'$229.95',recs:[{name:'Fatbaby Heritage Boot',price:'$149.95',g:'grad-4'},{name:'WorkHog Boot',price:'$169.95',g:'grad-8'},{name:'Sport Wide Square Toe',price:'$219.95',g:'grad-1'}]},
-  maya:{itemName:'Unbridled Westin Cowboy Boot',itemDetail:'Size: 7.5 - Color: Distressed Brown - Qty: 1',itemPrice:'$229.95',itemMember:'VIP Insider Price: $195.45 (15% off, auto)',itemGrad:'grad-1',pointsText:'<strong>VIP Insider perk:</strong> 15% off auto-applied. Earning <strong>978 points</strong> (25 pts/$1).',recsTitle:'Curated for Sarah',subtotal:'$195.45',recs:[{name:'Dixon Stretchfit Boot',price:'$169.95',g:'grad-4'},{name:"Anthem Boot",price:'$199.95',g:'grad-6'},{name:'Wexford Chelsea',price:'$99.50',g:'grad-5'}]},
+  maya:{itemName:'Unbridled Westin Cowboy Boot',itemDetail:'Size: 7.5 - Color: Distressed Brown - Qty: 1',itemPrice:'$229.95',itemMember:'VIP Insider Price: $195.45 (use code VIP15)',itemGrad:'grad-1',pointsText:'<strong>VIP Insider perk:</strong> 15% off auto-applied. Earning <strong>978 points</strong> (25 pts/$1).',recsTitle:'Curated for Sarah',subtotal:'$195.45',recs:[{name:'Dixon Stretchfit Boot',price:'$169.95',g:'grad-4'},{name:"Anthem Boot",price:'$199.95',g:'grad-6'},{name:'Wexford Chelsea',price:'$99.50',g:'grad-5'}]},
   jennifer:{itemName:'Sport Wide Square Toe Boot',itemDetail:'Size: 10.5 - Color: Brown - Width: EE - Qty: 1',itemPrice:'$219.95',itemMember:'Insider Price: $175.95 (w/ INSIDER20)',itemGrad:'grad-m1',pointsText:'<strong>Welcome back, Jake.</strong> Code INSIDER20 applied \u2014 saving you $44.',recsTitle:'Welcome Back Picks',subtotal:'$175.95',recs:[{name:'Heritage Roughstock',price:'$189.95',g:'grad-2'},{name:'WorkHog Wide Toe',price:'$169.95',g:'grad-8'},{name:'Groundbreaker Boot',price:'$149.95',g:'grad-4'}]},
   danielle:{itemName:'Unbridled Westin Cowboy Boot',itemDetail:'Size: 8.5 - Color: Distressed Brown - Qty: 1',itemPrice:'$229.95',itemMember:'Join Insider for 15% off',itemGrad:'grad-1',pointsText:'<strong>Caitlin, join Ariat Insider</strong> \u2014 get 10% off this order and earn points.',recsTitle:'More Western Boots',subtotal:'$229.95',recs:[{name:'Cassidy Western Boot',price:'$189.95',g:'grad-4'},{name:'Fatbaby Heritage',price:'$149.95',g:'grad-2'},{name:'Gambler Snake Boot',price:'$269.95',g:'grad-6'}]}
 };
 
 var CM_COPY={
-  urgent:['Ariat: Hey Insider! 5 months \u2014 we miss you. New western boots + 20% off \u2192 ariat.com/insider Code: INSIDER20','Ariat: Your 20% off is waiting, Insider. Boots you love are back \u2192 ariat.com/insider Code: INSIDER20'],
-  shorter:['Ariat: Insider! 20% off new western boots today \u2192 ariat.com/insider Code: INSIDER20','Ariat: Insider offer expires soon. New boots in \u2192 ariat.com/insider Code: INSIDER20'],
-  casual:['Ariat: Hey Insider! Long time. New boots + 20% off saved for you \u2192 ariat.com/insider Code: INSIDER20','Ariat: Insider! Your fave boots got new colourways. 20% off \u2192 ariat.com/insider Code: INSIDER20']
+  urgent:["Ariat: Jake, it's been 5 months — we miss you. New western boots just dropped + 20% off just for you → ariat.com/insider Code: INSIDER20","Ariat: Jake, your 20% off is waiting. The boots you love are back → ariat.com/insider Code: INSIDER20"],
+  shorter:["Ariat: Jake! 20% off new western boots today only → ariat.com/insider Code: INSIDER20","Ariat: Jake, your Insider offer expires soon. New boots in → ariat.com/insider Code: INSIDER20"],
+  casual:["Ariat: Hey Jake! Long time no see. New boots + 20% off saved for you → ariat.com/insider Code: INSIDER20","Ariat: Jake! Your fave boots got new colourways. 20% off waiting → ariat.com/insider Code: INSIDER20"]
 };
 
 var SCRIPTS={
@@ -1767,7 +1794,7 @@ function merkuryResolve(key){
     window.merkuryData=resolved;
     var isMatch=resolved.d.response==='match',d=isMatch?resolved.d.data:null;
     window._svdatalayer=null;
-    if(isMatch){window._svdatalayer={'dentsu.id':d['dentsu.id'],hashed_email:d.hashed_email,CRM_ID:d.CRM_ID||null,confidence_score:d.confidence_score,match_type:d.match_type,first_name:d.first_name,last_name:d.last_name,age_range:d.age_range,gender:d.gender,city:d.city,state:d.state,household_income_range:d.household_income_range,purchase_frequency:d.purchase_frequency,last_purchase_days:d.last_purchase_days,category_affinity_1:d.category_affinity_1,category_affinity_2:d.category_affinity_2,in_market_flag:d.in_market_flag,lifestyle_segment:d.lifestyle_segment,brand_loyalty_score:d.brand_loyalty_score,email_engagement:d.email_engagement,swim_propensity_score:d.swim_propensity_score||null,swim_in_market:d.swim_in_market||null,_t:resolved.t,_e:resolved.e};}
+    if(isMatch){window._svdatalayer={'dentsu.id':d['dentsu.id'],hmid:d.hmid||null,uuid:d.uuid||null,email_enc:d.email_enc||null,email_sha256_hashed:d.email_sha256_hashed||null,confidence_score:d.confidence_score,match_type:d.match_type,first_name:d.first_name,last_name:d.last_name,age_range:d.age_range,gender:d.gender,city:d.city,state:d.state,household_income_range:d.household_income_range,purchase_frequency:d.purchase_frequency,last_purchase_days:d.last_purchase_days,category_affinity_1:d.category_affinity_1,category_affinity_2:d.category_affinity_2,in_market_flag:d.in_market_flag,lifestyle_segment:d.lifestyle_segment,brand_loyalty_score:d.brand_loyalty_score,email_engagement:d.email_engagement,boots_propensity_score:d.boots_propensity_score||null,boots_in_market:d.boots_in_market||null,_t:resolved.t,_e:resolved.e};}
     window._svq.push(['_identityResolved',{hashed_email:isMatch?d.hashed_email:null,confidence_score:isMatch?d.confidence_score:null,response:resolved.d.response}]);
     document.dispatchEvent(new CustomEvent('merkury:resolved',{detail:resolved}));
   },latency);
@@ -1971,6 +1998,47 @@ function applyContent(key){
   }
 }
 
+
+function updateEmailForPersona(key){
+  if(key==='maya'){
+    set('em-to','s.k@nashville-example.com');
+    document.getElementById('em-subject').innerHTML='Sarah, your boots are waiting &mdash; use code VIP15';
+    document.getElementById('em-eyebrow').innerHTML='STILL THINKING IT OVER?';
+    document.getElementById('em-h1').innerHTML='Sarah, your boots are waiting.';
+    document.getElementById('em-sub').innerHTML='Your cart is saved. As a VIP Insider member, your exclusive discount is still applied.';
+    set('em-prod-name','Unbridled Westin Cowboy Boot');
+    set('em-prod-detail','Size: 7.5 | Color: Distressed Brown | Qty: 1');
+    set('em-prod-price','$229.95');
+    set('em-prod-member','VIP Insider Price: $195.45');
+    set('em-prod-points','You will earn 978 points (25 pts per $1) on this order');
+    set('em-body-copy','These sell out fast, Sarah. Your size is still available.');
+    document.getElementById('em-strip-icon').innerHTML='&#9733;';
+    document.getElementById('em-strip-text').innerHTML='<strong>Ariat Insider VIP perk:</strong> You are earning 25 points per $1 on this purchase.';
+    var ep=document.getElementById('em-merkury-pills');
+    if(ep)ep.innerHTML='<div class="email-merkury-pill trigger"><span>email_engagement:</span> ee_active</div><div class="email-merkury-pill trigger"><span>last_purchase_days:</span> 22</div><div class="email-merkury-pill"><span>category_affinity_1:</span> cat_western_boots_womens</div><div class="email-merkury-pill"><span>match_type:</span> deterministic</div><div class="email-merkury-pill"><span>loyalty_tier:</span> loyalty_vip</div><div class="email-merkury-pill"><span>hmid:</span> HMID-9C1F03...</div>';
+    var eimg=document.getElementById('em-prod-img');
+    if(eimg)eimg.style.background='url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw96ea37c7/images/warm/10081840_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat';
+  }else if(key==='jennifer'){
+    set('em-to','j.m@denver-example.com');
+    document.getElementById('em-subject').innerHTML="Jake, your 20% off is waiting &mdash; and so are your boots";
+    document.getElementById('em-eyebrow').innerHTML="WE'VE MISSED YOU, JAKE";
+    document.getElementById('em-h1').innerHTML="Jake, your 20% off is still waiting.";
+    document.getElementById('em-sub').innerHTML="Your cart is saved. Your Ariat Insider discount is still applied &mdash; come back and pick yours.";
+    set('em-prod-name','Sport Wide Square Toe Boot');
+    set('em-prod-detail','Size: 10.5 | Color: Brown | Width: EE | Qty: 1');
+    set('em-prod-price','$219.95');
+    set('em-prod-member','Insider Price: $175.95 (with INSIDER20)');
+    set('em-prod-points','You will earn 176 points on this order');
+    set('em-body-copy',"Your size is still available, Jake. Don’t let these sell out.");
+    document.getElementById('em-strip-icon').innerHTML='&#11044;';
+    document.getElementById('em-strip-text').innerHTML='<strong>Welcome back, Jake.</strong> Code INSIDER20 saves you $44 on this order.';
+    var ep2=document.getElementById('em-merkury-pills');
+    if(ep2)ep2.innerHTML='<div class="email-merkury-pill trigger"><span>email_engagement:</span> ee_lapsed</div><div class="email-merkury-pill trigger"><span>last_purchase_days:</span> 147</div><div class="email-merkury-pill"><span>category_affinity_1:</span> cat_western_boots_mens</div><div class="email-merkury-pill"><span>match_type:</span> probabilistic</div><div class="email-merkury-pill"><span>loyalty_status:</span> ls_lapsed</div><div class="email-merkury-pill"><span>hmid:</span> HMID-2B8D54...</div>';
+    var eimg2=document.getElementById('em-prod-img');
+    if(eimg2)eimg2.style.background='url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw670128d0/images/warm/10074282_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat';
+  }
+}
+
 function renderProductGrid(key){
   var grid=document.getElementById('cat-product-grid');if(!grid)return;
   var products=PRODUCTS[key]||PRODUCTS['def'];
@@ -2062,10 +2130,10 @@ function _doUpdateTimeline(key){
     if(obf===null)return row(label,null);
     return '<div class="itp-signal"><span style="color:#5588dd;font-size:11px;font-weight:600;">'+label+'</span><span style="color:rgba(0,0,0,.4);margin:0 4px;font-size:11px;">:</span><span class="itp-signal-str" style="font-size:11px;letter-spacing:.5px;">\''+obf+'\'</span></div>';
   }
-  var idRows=rowPII('dentsu_id',d['dentsu.id'],16)+rowPII('hashed_email',d.hashed_email,16)+row('confidence_score',d.confidence_score)+row('match_type',d.match_type)+rowPII('CRM_ID',d.CRM_ID,8);
+  var idRows=row('hmid',d.hmid)+rowPII('uuid',d.uuid,12)+rowPII('email_enc',d.email_enc,20)+rowPII('email_sha256_hashed',d.email_sha256_hashed,20)+row('confidence_score',d.confidence_score)+row('match_type',d.match_type);
   var thirdRows=row('age_range',d.age_range)+row('gender',d.gender)+row('city',d.city)+row('state',d.state)+row('household_income_range',d.household_income_range)+row('homeowner_flag',d.homeowner_flag)+row('lifestyle_segment',d.lifestyle_segment);
   var firstBlock='';
-  if(d.CRM_ID){
+  if(d.loyalty_tier){
     var firstRows=row('purchase_frequency',d.purchase_frequency)+row('last_purchase_days',d.last_purchase_days)+row('category_affinity_1',d.category_affinity_1)+row('category_affinity_2',d.category_affinity_2)+row('avg_order_value_range',d.avg_order_value_range)+row('brand_loyalty_score',d.brand_loyalty_score)+row('email_engagement',d.email_engagement)+row('in_market_flag',d.in_market_flag);
     firstBlock='<div class="itp-merkury-card" style="margin-top:10px;"><div class="itp-merkury-card-title" style="color:#c07820;border-color:#c07820;">1P Data \u2014 CRM Match</div>'+firstRows+'</div>';
   }
@@ -2084,7 +2152,7 @@ function toggleTimeline(){
 }
 function closeTimeline(){timelineOpen=false;var p=document.getElementById('id-timeline-panel');if(p)p.classList.remove('open');}
 
-function toggleChat(){
+function toggleChat(){return;/*disabled*/
   if(chatOpen){chatOpen=false;var w=document.getElementById('chat-window');if(w)w.classList.remove('open');return;}
   closeAllPanels();
   chatOpen=true;var w=document.getElementById('chat-window');if(w)w.classList.add('open');
@@ -2221,7 +2289,7 @@ function updateChatContext(){
 function updateStickyPill(key){
   var btn=document.getElementById('sticky-20-btn'),label=document.getElementById('sticky-20-label');if(!btn||!label)return;
   btn.classList.remove('hidden');
-  var configs={maya:{text:'Sarah \u2014 VIP Early Access Live',bg:'#0d7a5a'},jennifer:{text:'Save 20% off today',bg:'#b5717a'},danielle:{text:'New — Ariat Swim',bg:'#6a3aaa'},def:{text:'Get 15% Off',bg:'var(--black)'}};
+  var configs={maya:{text:'Sarah \u2014 VIP Early Access Live',bg:'#0d7a5a'},jennifer:{text:'Save 20% off today',bg:'#b5717a'},danielle:{text:'New — Ariat Swim',bg:'#6a3aaa'},def:{text:'Get 10% Off',bg:'var(--black)'}};
   var cfg=configs[key]||configs['def'];label.textContent=cfg.text;btn.style.background=cfg.bg;
   // Personalise util bar for Jennifer
   var joinBtn=document.getElementById('util-join-btn');
