@@ -267,7 +267,7 @@ footer{background:#fff;padding:40px 0 0;}
 .lb-sub{font-size:13px;color:var(--text2);line-height:1.5;}
 .lb-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;flex-shrink:0;}
 .lb-tiers{max-width:var(--mw);margin:0 auto;padding:0 var(--g) 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-.lb-tier{border:1px solid var(--border);overflow:hidden;background:#fff;position:relative;}
+.lb-tier{overflow:visible;border:1px solid var(--border);overflow:hidden;background:#fff;position:relative;}
 .lb-tier.active{border-color:#0d0d0d;}
 .lb-tier.active::before{content:'YOUR TIER';position:absolute;top:-10px;left:16px;background:#0d0d0d;color:#fff;font-size:9px;font-weight:700;letter-spacing:1.5px;padding:2px 8px;border-radius:2px;}
 .lb-tier-header{background:#f0ece8;padding:20px;display:flex;align-items:center;gap:14px;}
@@ -1888,6 +1888,28 @@ function applyLoyalty(key){
   var c1=document.getElementById('cat-lb-cta1');if(c1){c1.textContent=v.cta1;c1.className='btn-pill '+v.cta1Style+' btn-sm';}
   var c2=document.getElementById('cat-lb-cta2');if(c2){c2.textContent=v.cta2;c2.className='btn-pill '+v.cta2Style+' btn-sm';}
   [1,2,3].forEach(function(n){var t=document.getElementById('cat-tier-'+n);if(t)t.classList.toggle('active',v.activeTier===n);});
+  // Hide "Join for Free" on Tier 1 if persona is already a member (Sarah=VIP tier 3, Jake=Insider tier 1)
+  var t1btn=document.querySelector('#cat-tier-1 .lb-tier-hdr-btn');
+  var t3btn=document.querySelector('#cat-tier-3 .lb-tier-hdr-btn');
+  if(key==='maya'){
+    // Sarah is VIP (tier 3) — mark tier 1 as completed, tier 2 as completed
+    if(t1btn)t1btn.innerHTML='<span style="color:#C85A1A;font-weight:700;font-size:12px;">&#10003; MEMBER</span>';
+    var t2btn=document.querySelector('#cat-tier-2 .lb-tier-hdr-btn');
+    if(t2btn)t2btn.innerHTML='<span style="color:#C85A1A;font-weight:700;font-size:12px;">&#10003; MEMBER</span>';
+    if(t3btn)t3btn.innerHTML='<span style="color:#C85A1A;font-weight:700;font-size:12px;">&#9733; YOUR TIER</span>';
+  }else if(key==='jennifer'){
+    // Jake is Insider (tier 1) — mark tier 1 as current
+    if(t1btn)t1btn.innerHTML='<span style="color:#C85A1A;font-weight:700;font-size:12px;">&#10003; YOUR TIER</span>';
+    var t2btn=document.querySelector('#cat-tier-2 .lb-tier-hdr-btn');
+    if(t2btn)t2btn.innerHTML='<span style="font-size:12px;color:#666;">Spend $253 more to unlock</span>';
+    if(t3btn)t3btn.innerHTML='<a href="#" style="background:#C85A1A;color:#fff;padding:6px 16px;font-size:11px;font-weight:700;border-radius:2px;text-decoration:none;">Apply Now</a>';
+  }else{
+    // Default / Caitlin — show join buttons
+    if(t1btn)t1btn.innerHTML='<a href="#" onclick="openSignupModal()" style="background:#C85A1A;color:#fff;padding:6px 16px;font-size:11px;font-weight:700;border-radius:2px;text-decoration:none;">Join for Free</a>';
+    var t2btn=document.querySelector('#cat-tier-2 .lb-tier-hdr-btn');
+    if(t2btn)t2btn.innerHTML='';
+    if(t3btn)t3btn.innerHTML='<a href="#" style="background:#C85A1A;color:#fff;padding:6px 16px;font-size:11px;font-weight:700;border-radius:2px;text-decoration:none;">Apply Now</a>';
+  }
   var picon=document.getElementById('pln-icon');if(picon)picon.innerHTML=v.pdpIconHTML;
   setHTML('pln-text',v.pdpText);set('pln-cta',v.pdpCta);
 }
