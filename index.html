@@ -1978,10 +1978,11 @@ function _doUpdateTimeline(key){
 }
 
 function toggleTimeline(){
-  // Auto-close persona switcher when identity panel opens
+  // Auto-close persona switcher AND persona modal when identity panel opens
   var pp=document.getElementById('ps-panel');if(pp)pp.classList.remove('open');
   var pt=document.getElementById('ps-toggle');if(pt)pt.classList.remove('open');
   panelOpen=false;
+  dismissModal();
   if(timelineOpen){timelineOpen=false;var p=document.getElementById('id-timeline-panel');if(p)p.classList.remove('open');return;}
   closeAllPanels();
   timelineOpen=true;var p=document.getElementById('id-timeline-panel');if(p)p.classList.add('open');
