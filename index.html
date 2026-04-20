@@ -2292,7 +2292,7 @@ function openOfferModal(key){
   om.style.display='flex';
 }
 
-function openSignupModal(){closeAllPanels();var o=document.getElementById('signup-modal-overlay');if(o){o.style.display='flex';document.body.style.overflow='hidden';}}
+function openSignupModal(){closeAllPanels();var o=document.getElementById('signup-modal');if(o){o.style.display='flex';document.body.style.overflow='hidden';}var o2=document.getElementById('signup-modal-overlay');if(o2){o2.style.display='flex';document.body.style.overflow='hidden';}}
 function dismissSignupModal(){var o=document.getElementById('signup-modal-overlay');if(o){o.style.display='none';document.body.style.overflow='';}}
 function submitSignupModal(){var inp=document.getElementById('signup-email-input');if(inp&&inp.value.trim()){dismissSignupModal();}else{if(inp)inp.style.borderColor='#c9231a';setTimeout(function(){if(inp)inp.style.borderColor='';},1200);}}
 document.getElementById('signup-modal-overlay').addEventListener('click',function(e){if(e.target===this)dismissSignupModal();});
@@ -2476,6 +2476,54 @@ document.addEventListener('DOMContentLoaded',function(){
     }
   });
 });
+
+// ── closeAllPanels: close all slide-outs, panels, overlays ──────
+function closeAllPanels(){
+  // Close identity timeline
+  var tp=document.getElementById('id-timeline-panel');
+  if(tp)tp.classList.remove('open');
+  timelineOpen=false;
+  // Close chat
+  var cw=document.getElementById('chat-window');
+  if(cw)cw.classList.remove('open');
+  chatOpen=false;
+  // Close persona switcher panel
+  var pp=document.getElementById('ps-panel');
+  if(pp)pp.classList.remove('open');
+  var pt=document.getElementById('ps-toggle');
+  if(pt)pt.classList.remove('open');
+  panelOpen=false;
+  // Close integrations drawer
+  var ip=document.getElementById('ps-int-panel');
+  if(ip)ip.classList.remove('open');
+  intTab=null;
+  // Close ship flyout
+  var sf=document.getElementById('ship-flyout-overlay');
+  if(sf)sf.classList.remove('open');
+  // Close mega nav
+  var mn=document.getElementById('mega-nav');
+  if(mn)mn.style.display='none';
+}
+window.closeAllPanels=closeAllPanels;
+
+// ── closePushModal ───────────────────────────────────────────────
+function closePushModal(){
+  var m=document.getElementById('push-modal');
+  if(m)m.style.display='none';
+}
+window.closePushModal=closePushModal;
+
+// ── closeSignupModal ─────────────────────────────────────────────
+function closeSignupModal(){
+  // Handle both id="signup-modal" and id="signup-modal-overlay"
+  var m1=document.getElementById('signup-modal');
+  if(m1)m1.style.display='none';
+  var m2=document.getElementById('signup-modal-overlay');
+  if(m2)m2.style.display='none';
+  document.body.style.overflow='';
+}
+window.closeSignupModal=closeSignupModal;
+
 </script>
 
 <div id="signup-modal" onclick="if(event.target===this)closeSignupModal()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;align-items:center;justify-content:center;"><div style="background:#fff;max-width:440px;width:90%;padding:40px 36px 32px;position:relative;"><button onclick="closeSignupModal()" style="position:absolute;top:14px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1;">&times;</button><h2 style="font-size:24px;font-weight:900;line-height:1.2;margin:0 0 10px;">Your Ariat Insider Journey Starts Here</h2><p style="font-size:14px;color:#888;margin:0 0 22px;line-height:1.5;">Drop your email to get started.</p><input type="email" placeholder="Email" style="width:100%;padding:13px 14px;border:1px solid #ccc;font-size:14px;box-sizing:border-box;margin-bottom:10px;display:block;"><button onclick="closeSignupModal()" style="width:100%;padding:14px;background:#d0d0d0;color:#888;border:none;font-size:14px;font-weight:700;letter-spacing:.06em;cursor:pointer;display:block;">Continue</button><p style="font-size:12px;color:#888;margin:14px 0 18px;line-height:1.6;">Every purchase gets you closer to exclusive rewards. Only for Ariat Insiders. <a style="color:#C85A1A;text-decoration:none;font-weight:600;">Learn More</a></p><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center;"><div style="font-size:11px;color:#666;line-height:1.4;"><div style="font-size:22px;margin-bottom:4px;">&#128666;</div>Free shipping &amp; returns</div><div style="font-size:11px;color:#666;line-height:1.4;"><div style="font-size:22px;margin-bottom:4px;">&#127915;</div>1 point per $1 spent</div><div style="font-size:11px;color:#666;line-height:1.4;"><div style="font-size:22px;margin-bottom:4px;">&#127874;</div>Birthday surprise</div><div style="font-size:11px;color:#666;line-height:1.4;"><div style="font-size:22px;margin-bottom:4px;">&#128274;</div>Early access</div></div></div></div>
