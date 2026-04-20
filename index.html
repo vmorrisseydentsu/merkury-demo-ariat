@@ -245,7 +245,7 @@ footer{background:#fff;padding:40px 0 0;}
 .cat-page-filters{display:flex;gap:10px;flex-wrap:wrap;padding-bottom:20px;}
 .filter-chip{padding:9px 20px;border:1.5px solid var(--border);font-size:13px;color:var(--text);cursor:pointer;background:#fff;}
 .filter-chip.active{border-color:#0d0d0d;}
-.cat-page-grid-wrap{padding:32px 0 0;}
+.cat-page-grid-wrap{order:1;padding:32px 0 0;}
 .cat-page-result-count{font-size:13px;color:var(--text3);margin-bottom:24px;}
 .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
 .product-tile{cursor:pointer;}
@@ -259,7 +259,7 @@ footer{background:#fff;padding:40px 0 0;}
 .pt-member-price{font-size:12px;color:#c0392b;margin-top:2px;font-weight:500;}
 
 /* LOYALTY BANNER */
-.loyalty-banner{background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.loyalty-banner{order:99;background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .loyalty-banner-inner{max-width:var(--mw);margin:0 auto;padding:32px var(--g);display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;}
 .lb-icon{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
 .lb-eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:4px;}
@@ -637,7 +637,7 @@ footer{background:#fff;padding:40px 0 0;}
 #ps-toggle .ps-dot{width:8px;height:8px;border-radius:50%;background:#C85A1A;flex-shrink:0;animation:psDotPulse 2s ease-in-out infinite;}
 #ps-toggle .ps-chevron{font-size:9px;opacity:.7;transition:transform .2s;}
 #ps-toggle.open .ps-chevron{transform:rotate(180deg);}
-#ps-panel{display:none;position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1.5px solid var(--border);box-shadow:0 12px 40px rgba(0,0,0,.15);width:340px;overflow:hidden;z-index:8500;}
+#ps-panel{display:none;position:absolute;top:calc(100% + 10px);right:0;background:#fff;border:1.5px solid var(--border);box-shadow:0 12px 40px rgba(0,0,0,.15);width:340px;overflow:hidden;z-index:10000;}
 #ps-panel.open{display:block;}
 .ps-header{background:#0d0d0d;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
 .ps-header-left h3{font-family:var(--font);font-size:13px;font-weight:700;color:#fff;margin-bottom:2px;}
@@ -735,7 +735,7 @@ footer{background:#fff;padding:40px 0 0;}
   .filter-chip{padding:7px 12px;font-size:11px;}
   
   #ps-toggle{font-size:11px;padding:8px 12px;}
-  #ps-panel{width:calc(100vw - 24px);right:0;}
+  #ps-panel{width:calc(100vw - 24px);right:0;z-index:10000;}
   #sticky-20-btn{bottom:12px;left:12px;font-size:11px;padding:8px 12px;}
   
   
@@ -847,7 +847,7 @@ footer{background:#fff;padding:40px 0 0;}
 .hero{overflow:hidden;}
 .hero-split{position:relative;min-height:540px;background:url("https://res.cloudinary.com/ariat-media/image/upload/c_fill,w_1920/dpr_auto,q_auto/Hero_Stagecoach_04012026_D") center/cover no-repeat;display:flex;align-items:flex-end;}
 .hero-split::before{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.58) 0%,rgba(0,0,0,.22) 55%,transparent 100%);z-index:1;}
-.hero-photo-left{display:none;}
+.hero-photo-left{display:none!important;width:0;height:0;}
 .hero-photo-right{display:none;}
 .hero-center{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;padding:48px 64px;text-align:left;background:transparent;max-width:580px;}
 .hero-h1-light{font-size:clamp(32px,3.2vw,52px);font-weight:400;color:#fff;letter-spacing:.04em;text-transform:uppercase;line-height:1.05;display:block;}
@@ -856,8 +856,8 @@ footer{background:#fff;padding:40px 0 0;}
 .hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.8);margin-bottom:10px;display:none;}
 /* Two-button CTA row like Ariat.com */
 .hero-cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;}
-.hero-btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 28px;font-family:var(--font);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.75);transition:background .18s;}
-.hero-btn:hover{background:rgba(255,255,255,.12);}
+.hero-btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 28px;font-family:var(--font);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;background:#fff;color:#111;border:2px solid #fff;transition:background .18s;}
+.hero-btn:hover{background:rgba(255,255,255,.85);}
 #hero-cta1{display:none!important;}
 
 /* Home category tiles */
@@ -923,6 +923,8 @@ footer{background:#fff;padding:40px 0 0;}
 .pdp-photo-main{aspect-ratio:3/4;overflow:hidden;grid-column:span 2;background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw96ea37c7/images/warm/10081840_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
 .pdp-photo-thumb{aspect-ratio:3/4;overflow:hidden;background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dwf94447e6/images/warm/10072964_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;}
 .email-product-img{background:url("https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw96ea37c7/images/warm/10081840_3-4_front_warm.jpg?sw=600&sh=800") center top/cover no-repeat;min-height:160px;}
+#ps-int-panel{display:none;position:absolute;top:0;right:calc(100% + 8px);background:#1a1a1a;width:240px;border-radius:8px;padding:12px 0;z-index:10001;box-shadow:0 8px 32px rgba(0,0,0,.4);}
+#ps-int-panel.open{display:block;}
 </style>
 </head>
 <body>
@@ -1137,7 +1139,7 @@ footer{background:#fff;padding:40px 0 0;}
 
 <!-- JENNIFER WIN-BACK EMAIL MODAL -->
 <!-- DISPLAY AD MODAL — Danielle -->
-<div id="display-ad-modal" onclick="if(event.target===this)this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9998;align-items:center;justify-content:center;"><div style="background:#fff;max-width:360px;width:90%;border-radius:2px;overflow:hidden;position:relative;"><div style="height:240px;background:url('https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dwf94447e6/images/warm/10072964_front_warm.jpg?sw=600&sh=800') center top/cover no-repeat;position:relative;"><div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.72));"></div><button onclick="document.getElementById('display-ad-modal').style.display='none'" style="position:absolute;top:10px;right:12px;background:none;border:none;font-size:20px;cursor:pointer;color:#fff;z-index:2;">&times;</button><div style="position:absolute;bottom:16px;left:16px;right:16px;"><div style="font-size:10px;font-weight:700;letter-spacing:.14em;color:rgba(255,255,255,.8);text-transform:uppercase;margin-bottom:4px;">NEW VISITOR &#8212; WESTERN BOOT</div><div style="font-size:18px;font-weight:900;color:#fff;line-height:1.2;">Find Your First Pair of Ariat Boots.</div></div></div><div style="padding:20px 20px 16px;"><p style="font-size:13px;color:#666;line-height:1.6;margin:0 0 14px;">Caitlin is new to Ariat. Merkury&#8217;s modeled graph identified her as a high-propensity western boot buyer based on behavioral signals across the open web. This display ad targets her via DSP using the Merkury HMID &#8212; no email or CRM record required.</p><div style="background:#f7f4f0;padding:12px;margin-bottom:14px;"><div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#C85A1A;margin-bottom:8px;">MERKURY SIGNALS</div><div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-size:11px;background:#fff;border:1px solid #e0e0e0;padding:3px 8px;">boots_propensity_score: 82</span><span style="font-size:11px;background:#fff;border:1px solid #e0e0e0;padding:3px 8px;">confidence_score: 4</span><span style="font-size:11px;background:#fff;border:1px solid #e0e0e0;padding:3px 8px;">match_type: probabilistic</span><span style="font-size:11px;background:#fff;border:1px solid #e0e0e0;padding:3px 8px;">lifestyle_segment: ls_western_enthusiast</span><span style="font-size:11px;background:#fff;border:1px solid #e0e0e0;padding:3px 8px;">hmid: 7F3A29C10041D8</span></div></div><div onclick="document.getElementById('display-ad-modal').style.display='none'" style="background:#111;color:#fff;padding:12px;text-align:center;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;">Shop Western Boots &#8212; NEWRIDER10</div></div></div></div>
+<div id="display-ad-modal" onclick="if(event.target===this)this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9998;align-items:center;justify-content:center;"><div style="background:#fff;max-width:360px;width:90%;border-radius:2px;overflow:hidden;position:relative;"><div style="height:240px;background:url('https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dwf94447e6/images/warm/10072964_front_warm.jpg?sw=600&sh=800') center top/cover no-repeat;position:relative;"><div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.72));"></div><button onclick="closeDisplayAdModal()" style="position:absolute;top:10px;right:12px;background:none;border:none;font-size:20px;cursor:pointer;color:#fff;z-index:2;">&times;</button><div style="position:absolute;bottom:16px;left:16px;right:16px;"><div style="font-size:10px;font-weight:700;letter-spacing:.14em;color:rgba(255,255,255,.8);text-transform:uppercase;margin-bottom:4px;">NEW VISITOR &#8212; WESTERN BOOT</div><div style="font-size:18px;font-weight:900;color:#fff;line-height:1.2;">Find Your First Pair of Ariat Boots.</div></div></div><div style="padding:20px 20px 16px;"><p style="font-size:13px;color:#666;line-height:1.6;margin:0 0 14px;">Caitlin is new to Ariat. Merkury&#8217;s modeled graph identified her as a high-propensity western boot buyer based on behavioral signals across the open web. This display ad targets her via DSP using the Merkury HMID &#8212; no email or CRM record required.</p><div style="background:#f7f4f0;padding:12px;margin-bottom:14px;"><div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#C85A1A;margin-bottom:8px;">MERKURY SIGNALS</div><div style="display:flex;flex-wrap:wrap;gap:6px;"><span style="font-size:11px;background:#fff;border:1px solid #e0e0e0;padding:3px 8px;">boots_propensity_score: 82</span><span style="font-size:11px;background:#fff;border:1px solid #e0e0e0;padding:3px 8px;">confidence_score: 4</span><span style="font-size:11px;background:#fff;border:1px solid #e0e0e0;padding:3px 8px;">match_type: probabilistic</span><span style="font-size:11px;background:#fff;border:1px solid #e0e0e0;padding:3px 8px;">lifestyle_segment: ls_western_enthusiast</span><span style="font-size:11px;background:#fff;border:1px solid #e0e0e0;padding:3px 8px;">hmid: 7F3A29C10041D8</span></div></div><div onclick="closeDisplayAdModal()" style="background:#111;color:#fff;padding:12px;text-align:center;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;">Shop Western Boots &#8212; NEWRIDER10</div></div></div></div>
 
 <div id="jennifer-email-modal" onclick="if(event.target===this)closeJenniferEmailModal()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9998;align-items:flex-start;justify-content:center;padding-top:40px;overflow-y:auto;"><div style="background:#fff;max-width:600px;width:95%;border-radius:2px;overflow:hidden;position:relative;"><div style="background:#1a1a2e;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;"><div style="font-size:11px;font-weight:700;letter-spacing:.12em;color:#aaa;text-transform:uppercase;">MAIL PREVIEW</div><button onclick="closeJenniferEmailModal()" style="background:none;border:none;color:#aaa;font-size:18px;cursor:pointer;">&times;</button></div><div style="background:#111;padding:10px 20px;font-size:12px;color:#888;"><div><strong style="color:#aaa;">From:</strong> Ariat &lt;noreply@ariat.com&gt;</div><div><strong style="color:#aaa;">To:</strong> j.m@denver-example.com</div><div><strong style="color:#aaa;">Subject:</strong> <span style="color:#fff;font-weight:600;">Jake, your 20% off is waiting &#8212; and so are your boots</span></div></div><div style="background:#111;padding:14px;text-align:center;border-bottom:1px solid #222;"><div style="font-size:18px;font-weight:900;letter-spacing:.18em;color:#fff;">ARIAT</div></div><div style="background:linear-gradient(135deg,#111111,#1a1a1a);padding:32px 24px;text-align:center;"><div style="font-size:11px;font-weight:700;letter-spacing:.18em;color:#C85A1A;text-transform:uppercase;margin-bottom:10px;">WE&#8217;VE MISSED YOU, JAKE</div><h2 style="font-size:26px;font-weight:900;color:#fff;margin:0 0 12px;line-height:1.2;">Jake, your 20% off is waiting.</h2><p style="font-size:13px;color:#ccc;margin:0;line-height:1.6;">Your cart is saved. Your Ariat Insider discount is still applied &#8212; come back and pick yours.</p></div><div style="padding:24px;background:#fff;"><div style="border:1px solid #e8e8e8;display:flex;gap:16px;padding:16px;margin-bottom:20px;"><div style="width:130px;height:160px;flex-shrink:0;background:url('https://www.ariat.com/dw/image/v2/AAML_PRD/on/demandware.static/-/Sites-ARIAT/default/dw4f370b55/images/warm/10074189_3-4_front_warm.jpg?sw=600&sh=800') center top/cover no-repeat;"></div><div><div style="font-size:10px;font-weight:700;letter-spacing:.12em;color:#C85A1A;text-transform:uppercase;margin-bottom:8px;">IN YOUR CART</div><div style="font-size:16px;font-weight:700;margin-bottom:6px;">WorkHog Wide Square Toe Boot</div><div style="font-size:12px;color:#666;margin-bottom:12px;">Size: 10.5 | Color: Brown | Width: EE | Qty: 1</div><div style="font-size:18px;font-weight:700;margin-bottom:4px;">$169.95</div><div style="font-size:13px;color:#C85A1A;font-weight:600;margin-bottom:4px;">Insider Price: $135.95 (with INSIDER20)</div><div style="font-size:12px;color:#C85A1A;">You will earn 136 points on this order</div></div></div><p style="font-size:13px;color:#666;text-align:center;margin-bottom:20px;">Your size is still available, Jake. Don&#8217;t let these sell out.</p><div onclick="closeJenniferEmailModal()" style="display:block;background:#111;color:#fff;text-align:center;padding:15px;font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;">Shop Boots &#8212; 20% Off</div></div><div style="background:#f7f4f0;padding:16px 24px;display:flex;align-items:center;gap:12px;border-top:1px solid #e8e8e8;"><span style="font-size:22px;">&#11044;</span><span style="font-size:13px;"><strong>Welcome back, Jake.</strong> Code INSIDER20 saves you $34 on this order.</span></div><div style="padding:16px 24px;background:#f0f4ff;border-top:1px solid #e0e8ff;"><div style="font-size:10px;font-weight:700;letter-spacing:.12em;color:#C85A1A;margin-bottom:10px;">MERKURY SIGNALS &#8212; EMAIL PARTNER</div><div style="display:flex;flex-wrap:wrap;gap:8px;"><div style="background:#fff;border:1px solid #dde;padding:4px 10px;font-size:11px;"><span style="color:#C85A1A;font-weight:600;">email_engagement:</span> ee_lapsed</div><div style="background:#fff;border:1px solid #dde;padding:4px 10px;font-size:11px;"><span style="color:#C85A1A;font-weight:600;">last_purchase_days:</span> 147</div><div style="background:#fff;border:1px solid #dde;padding:4px 10px;font-size:11px;"><span style="color:#C85A1A;font-weight:600;">category_affinity_1:</span> cat_western_boots_mens</div><div style="background:#fff;border:1px solid #dde;padding:4px 10px;font-size:11px;"><span style="color:#C85A1A;font-weight:600;">loyalty_status:</span> ls_lapsed</div><div style="background:#fff;border:1px solid #dde;padding:4px 10px;font-size:11px;"><span style="color:#C85A1A;font-weight:600;">hmid:</span> 2B8D54E71109C4</div></div></div></div></div>
 
@@ -1161,7 +1163,7 @@ footer{background:#fff;padding:40px 0 0;}
 <!-- MAIN NAV -->
 <div class="main-nav">
   <div class="nav-inner">
-    <div class="nav-logo" onclick="showPage('home')"><svg height="36" viewBox="0 0 160 50" xmlns="http://www.w3.org/2000/svg"><path d="M10 4 L2 8 L2 20 C2 32 10 40 18 43 C26 40 34 32 34 20 L34 8 Z" fill="none" stroke="#111" stroke-width="1.8"/><circle cx="18" cy="22" r="4" fill="none" stroke="#111" stroke-width="1.4"/><path d="M18 18 L18 14 M14.5 20 L11 17.5 M21.5 20 L25 17.5" stroke="#111" stroke-width="1.4" stroke-linecap="round"/><text x="40" y="32" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="900" font-size="22" letter-spacing="3" fill="#111111">ARIAT</text></svg></div>
+    <div class="nav-logo" onclick="showPage('home')" style="cursor:pointer;"><img src="https://www.ariat.com/on/demandware.static/Sites-Ariat-Site/-/default/dw13358269/images/logotypes/ariat-complex-black.svg" alt="Ariat" height="32" style="display:block;height:32px;width:auto;"></div>
     <div class="nav-links">
       <span class="nav-link" onclick="showPage('new-arrivals')">New</span>
       <span class="nav-link" onclick="showPage('bottoms')">Work Boots</span>
@@ -1220,7 +1222,7 @@ footer{background:#fff;padding:40px 0 0;}
       <span class="hero-h1-bold" id="hero-h1-bold"></span>
       <p class="hero-sub" id="hero-sub">Step into festival season with Ariat, the official boot of Stagecoach 2026.</p>
       <div class="hero-cta-row">
-        <a class="hero-btn" id="hero-btn-men" onclick="showPage('category')">Shop Men</a>
+        <a class="hero-btn" id="hero-btn-men" onclick="if(window._activeKey==='jennifer'){showPage('category');}else{showPage('category');}">Shop Men</a>
         <a class="hero-btn" id="hero-btn-women" onclick="showPage('category')">Shop Women</a>
       </div>
       <a id="hero-cta1" style="display:none"></a>
@@ -1285,6 +1287,7 @@ footer{background:#fff;padding:40px 0 0;}
 <!-- NEW ARRIVALS PAGE -->
 <div id="page-new-arrivals" class="page">
   <div class="cat-page-hero">
+  <div id="cat-pg-hero-band" style="width:100%;height:260px;background:url('https://res.cloudinary.com/ariat-media/image/upload/c_fill,g_auto,w_1120/dpr_auto,q_auto/S26-Womens_D') center/cover no-repeat;position:relative;display:flex;align-items:flex-end;"><div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,.1) 60%,transparent);"></div><div style="position:relative;z-index:2;padding:24px 48px;"><div id="cat-pg-hero-eyebrow" style="font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:4px;">WOMEN</div><div id="cat-pg-hero-h1" style="font-size:clamp(24px,3vw,40px);font-weight:900;color:#fff;line-height:1.05;">Make a Statement</div></div></div>
   <div class="cat-page-hero-inner">
     <div class="breadcrumb" onclick="showPage('home')">Home / New Arrivals</div>
     <h1 class="cat-page-title">New Arrivals</h1>
@@ -1676,13 +1679,13 @@ var PERSONAS=[
   {key:'def',name:'Default View',title:'Anonymous \u2014 no identity match',avatar:'\u{1F30E}',bg:'#f0ece8',tags:[{l:'No Match',c:'nomatch'}]},
   {key:'maya',name:'Sarah K.',title:'VIP Insider \u00B7 Authenticated \u00B7 Nashville, TN',avatar:'\u2B50',bg:'#fff8f0',tags:[{l:'Equestrian',c:'segment'},{l:'VIP Insider',c:'auth'}]},
   {key:'jennifer',name:'Jake M.',title:'Lapsed Insider \u00B7 Probabilistic \u00B7 Denver, CO',avatar:'\u{1F97E}',bg:'#f0f0ff',tags:[{l:'Ranch Pro',c:'segment'},{l:'Lapsed Insider',c:'unauth'}]},
-  {key:'danielle',name:'Caitlin R.',title:'Prospective Buyer \u00B7 Probabilistic \u00B7 Dallas, TX',avatar:'\u{1F920}',bg:'#fff8f0',tags:[{l:'Western Enthusiast',c:'segment'},{l:'Modeled',c:'prospect'}]}
+  {key:'danielle',name:'Caitlin R.',title:'Prospective Buyer \u00B7 Probabilistic \u00B7 Dallas, TX',avatar:'\u{1F920}',bg:'#fff8f0',tags:[{l:'Western Enthusiast',c:'segment'},{l:'Probabilistic',c:'prob'}]}
 ];
 
 var OFFER_LIGHTBOX={
   maya:{name:'Sarah \u2014 VIP Insider',headline:'VIP early access is yours.',desc:'As a VIP Insider, your 15% off is auto-applied. First look at Spring Western.',code:'SARAHVIP15'},
   jennifer:{name:'Jake M. \u2014 Welcome Back, Insider',headline:'20% off to welcome you back.',desc:"It's been a while and we have beautiful new arrivals. Your Insider offer is ready.",code:'INSIDER20'},
-  danielle:{name:'Caitlin R. \u2014 New Rider Offer',headline:'Your first boots, 10% off.',desc:'New to Ariat? Sign up for Ariat Insider and unlock 10% off your first western boot order. Start earning points from day one.',code:'NEWRIDER10'}
+  danielle:{name:'New to Ariat? \u2014 New Rider Offer',headline:'Your first boots, 10% off.',desc:'New to Ariat? Sign up for Ariat Insider and unlock 10% off your first western boot order. Start earning points from day one.',code:'NEWRIDER10'}
 };
 
 var CONF_EXPLAIN={
@@ -1732,7 +1735,7 @@ function showPage(n){
   var p=document.getElementById('page-'+n);if(p)p.classList.add('active');
   window.scrollTo({top:0,behavior:'instant'});
   updatePageIndicator();
-  if(activeKey!=='def')setTimeout(function(){applyContent(activeKey);},60);
+  if(activeKey!=='def')setTimeout(function(){applyContent(activeKey);var catBand=document.getElementById('cat-pg-hero-band');var catEy=document.getElementById('cat-pg-hero-eyebrow');var catH1=document.getElementById('cat-pg-hero-h1');if(catBand){if(activeKey==='jennifer'){catBand.style.backgroundImage='url("https://res.cloudinary.com/ariat-media/image/upload/c_fill,g_auto,w_1120/dpr_auto,q_auto/CLP_Mens_S26_D")';if(catEy)catEy.textContent='MEN';if(catH1)catH1.textContent='Go Your Own Way';}else{catBand.style.backgroundImage='url("https://res.cloudinary.com/ariat-media/image/upload/c_fill,g_auto,w_1120/dpr_auto,q_auto/S26-Womens_D")';if(catEy)catEy.textContent='WOMEN';if(catH1)catH1.textContent='Make a Statement';}}},60);
   window._svq.push(['_trackPageView']);
   setTimeout(function(){merkuryResolve(window._merkuryPersona||'def');},90);
   closeMegaNav();
@@ -2075,7 +2078,7 @@ function closeTimeline(){timelineOpen=false;var p=document.getElementById('id-ti
 function updateStickyPill(key){
   var btn=document.getElementById('sticky-20-btn'),label=document.getElementById('sticky-20-label');if(!btn||!label)return;
   btn.classList.remove('hidden');
-  var configs={maya:{text:'Sarah \u2014 VIP Early Access Live',bg:'#111111'},jennifer:{text:'Save 20% off today',bg:'#C85A1A'},danielle:{text:'Caitlin \u2014 10% Off Your First Pair',bg:'#C85A1A'},def:{text:'Get 10% Off',bg:'var(--black)'}};
+  var configs={maya:{text:'Sarah \u2014 VIP Early Access Live',bg:'#111111'},jennifer:{text:'Save 20% off today',bg:'#C85A1A'},danielle:{text:'New? Get 10% Off Your First Pair',bg:'#C85A1A'},def:{text:'Get 10% Off',bg:'var(--black)'}};
   var cfg=configs[key]||configs['def'];label.textContent=cfg.text;btn.style.background=cfg.bg;
   // Personalise util bar for Jennifer
   var joinBtn=document.getElementById('util-join-btn');
@@ -2284,8 +2287,8 @@ function applyPersona(key){
     if(timelineOpen){timelineOpen=false;var tp=document.getElementById('id-timeline-panel');if(tp)tp.classList.remove('open');}
   }
 }
-function openDisplayAdModal(){var m=document.getElementById('display-ad-modal');if(m){m.classList.add('open');document.body.style.overflow='hidden';}}
-function closeDisplayAdModal(){var m=document.getElementById('display-ad-modal');if(m){m.classList.remove('open');document.body.style.overflow='';}}
+function openDisplayAdModal(){var m=document.getElementById('display-ad-modal');if(m){m.style.display='flex';document.body.style.overflow='hidden';}}
+function closeDisplayAdModal(){var m=document.getElementById('display-ad-modal');if(m){m.style.display='none';document.body.style.overflow='';}}
 function openJenniferEmailModal(){var m=document.getElementById("jennifer-email-modal");if(m){m.style.display="flex";document.body.style.overflow="hidden";}}
 function closeJenniferEmailModal(){var m=document.getElementById('jennifer-email-modal');if(m){m.style.display='none';document.body.style.overflow='';}}
 window.openJenniferEmailModal=openJenniferEmailModal;
@@ -2354,6 +2357,7 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 
 // ── closeAllPanels: close all slide-outs, panels, overlays ──────
+function updateChatContext(){}
 function closeAllPanels(){
   // Close identity timeline
   var tp=document.getElementById('id-timeline-panel');
