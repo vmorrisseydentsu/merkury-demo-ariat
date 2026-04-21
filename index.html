@@ -1067,33 +1067,86 @@ footer{background:#fff;padding:40px 0 0;}
 </div>
 
 <!-- CAMPAIGN BUILDER -->
-<div id="campaign-modal-overlay">
-  <div class="campaign-modal">
-    <button class="campaign-modal-close" onclick="closeCampaignModal()">&#215;</button>
-    <div class="cm-header"><div class="cm-header-top"><div class="cm-header-icon">&#128242;</div><div class="cm-header-title">Attentive SMS Re-engagement Campaign</div></div><div class="cm-header-sub">Powered by Merkury - messaging partner - Triggered by lapsed Insider signal</div></div>
-    <div class="cm-body">
-      <div class="cm-left">
-        <div class="cm-section-label">Audience</div>
-        <div class="cm-audience-card"><div class="cm-aud-icon">&#128105;</div><div><div class="cm-aud-name">Attentive — Lapsed Ariat Insiders - Western Boots Affinity</div><div class="cm-aud-size">3,847 subscribers matched via Merkury signals</div><div class="cm-aud-signals"><div style="font-size:9px;font-weight:700;letter-spacing:.1em;color:#C85A1A;margin-bottom:6px;width:100%;">POWERED BY ATTENTIVE VIA MERKURY IDENTITY</div><div class="cm-signal-pill trigger">last_purchase_days: 147</div><div class="cm-signal-pill trigger">email_engagement: ee_lapsed</div><div class="cm-signal-pill">category_affinity_1: cat_western_boots_mens</div><div class="cm-signal-pill">in_market_flag: Y</div></div></div></div>
-        <div class="cm-section-label">AI Copy Assistant</div>
-        <div class="cm-ai-bar"><div class="cm-ai-bar-label">AI copy assistant</div><div class="cm-tone-pills"><button class="cm-tone-pill" onclick="setCmTone(this,'shorter')">Make shorter</button><button class="cm-tone-pill active" onclick="setCmTone(this,'urgent')">Add urgency</button><button class="cm-tone-pill" onclick="setCmTone(this,'casual')">Make casual</button></div></div>
-        <div class="cm-variants">
-          <div class="cm-variant active" onclick="selectVariant(this,0)"><div class="cm-variant-label">Variant A</div><div class="cm-variant-text" id="cv-text-0">Ariat: Jake, we've missed you &mdash; we miss you. New western boots just dropped + 20% off just for you &rarr; ariat.com/insider Code: INSIDER20</div><div class="cm-add-msg">+ Add message</div></div>
-          <div class="cm-variant" onclick="selectVariant(this,1)"><div class="cm-variant-label">Variant B</div><div class="cm-variant-text" id="cv-text-1">Ariat: Jake, your 20% off is waiting. The boots you love are back &rarr; ariat.com/insider Code: INSIDER20</div><div class="cm-add-msg">+ Add message</div></div>
-        </div>
-        <div class="cm-section-label">Send Time</div>
-        <div class="cm-sendtime">
-          <div class="cm-st-option" onclick="selectSendTime(0)"><div class="cm-st-radio selected" id="cm-st-0"></div><div><div class="cm-st-label">Use Send Time AI <span class="cm-st-badge">AI optimized</span></div><div class="cm-st-detail">Sent at each subscriber's optimal send time</div></div></div>
-          <div class="cm-st-option" onclick="selectSendTime(1)"><div class="cm-st-radio" id="cm-st-1"></div><div><div class="cm-st-label">Use specified time</div><div class="cm-st-detail">Today at 8:30 PM</div></div></div>
+<div id="campaign-modal-overlay" onclick="if(event.target===this)closeCampaignModal()" style="display:none;position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.6);align-items:flex-start;justify-content:center;padding-top:40px;overflow-y:auto;">
+  <div style="background:#fff;max-width:520px;width:95%;border-radius:4px;overflow:hidden;position:relative;">
+    <!-- Header -->
+    <div style="background:#111;padding:16px 24px;display:flex;align-items:center;gap:12px;">
+      <span style="font-size:20px;">&#128242;</span>
+      <div>
+        <div style="font-size:14px;font-weight:800;color:#fff;">Attentive — SMS Re-engagement</div>
+        <div style="font-size:11px;color:#888;">Powered by Merkury Identity</div>
+      </div>
+      <button onclick="closeCampaignModal()" style="margin-left:auto;background:none;border:none;color:#888;font-size:20px;cursor:pointer;">&times;</button>
+    </div>
+
+    <!-- Audience Card -->
+    <div style="padding:20px 24px;border-bottom:1px solid #e8e8e8;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.12em;color:#C85A1A;margin-bottom:10px;">MERKURY AUDIENCE</div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+        <div style="width:36px;height:36px;background:#f7f4f0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;">&#128373;</div>
+        <div>
+          <div style="font-size:14px;font-weight:700;">Lapsed Ariat Insiders — Western Boot Affinity</div>
+          <div style="font-size:12px;color:#888;">3,847 subscribers matched via Merkury identity signals</div>
         </div>
       </div>
-      <div class="cm-right">
-        <div class="cm-section-label" style="align-self:flex-start;margin-bottom:12px;">Preview</div>
-        <div class="cm-phone"><div class="cm-phone-screen"><div class="cm-phone-notch"></div><div class="cm-phone-status"><span class="cm-phone-status-time">9:41</span></div><div class="cm-phone-header"><div class="cm-phone-avatar"><svg viewBox="0 0 40 40"><path d="M20 4 L24 14 L34 10 L28 20 L34 30 L24 26 L20 36 L16 26 L6 30 L12 20 L6 10 L16 14 Z" fill="white"/></svg></div><div class="cm-phone-sender">Ariat</div><div class="cm-phone-type">Text Message</div></div><div class="cm-phone-thread"><div class="cm-phone-bubble" id="cm-phone-preview">Ariat: Jake, we've missed you - new western boots + 20% off just for you! Code: INSIDER20</div></div></div></div>
-        <div class="cm-perf-card"><div class="cm-perf-label">Est. Performance</div><div class="cm-perf-row"><span>Audience size</span><strong>3,847</strong></div><div class="cm-perf-row"><span>Est. click rate</span><strong>19–26%</strong></div><div class="cm-perf-row green"><span>Est. revenue</span><strong>$14,200–$21,800</strong></div></div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;">
+        <span style="font-size:10px;background:#fff8f0;border:1px solid #e8d8c8;padding:3px 8px;color:#C85A1A;font-weight:600;">last_purchase_days: 147</span>
+        <span style="font-size:10px;background:#fff8f0;border:1px solid #e8d8c8;padding:3px 8px;color:#C85A1A;font-weight:600;">email_engagement: ee_lapsed</span>
+        <span style="font-size:10px;background:#f7f4f0;border:1px solid #e0e0e0;padding:3px 8px;color:#666;">category_affinity_1: cat_western_boots_mens</span>
+        <span style="font-size:10px;background:#f7f4f0;border:1px solid #e0e0e0;padding:3px 8px;color:#666;">confidence_score: 2</span>
       </div>
     </div>
-    <div class="cm-footer"><div class="cm-footer-left">Sending to <strong>3,847 subscribers</strong> - Merkury-matched lapsed segment</div><button class="cm-schedule-btn" onclick="closeCampaignModal()">Review and schedule campaign</button></div>
+
+    <!-- AI Copy Assistant -->
+    <div style="padding:20px 24px;border-bottom:1px solid #e8e8e8;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
+        <span style="font-size:16px;">&#9889;</span>
+        <div style="font-size:13px;font-weight:800;letter-spacing:.04em;">AI COPY ASSISTANT</div>
+        <span style="font-size:10px;background:#f0f0f0;padding:2px 8px;border-radius:10px;color:#888;font-weight:600;">ATTENTIVE AI</span>
+      </div>
+      <div style="font-size:12px;color:#888;margin-bottom:14px;">Generated from Merkury identity signals + purchase history</div>
+
+      <!-- Generated Message -->
+      <div style="background:#f7f4f0;border-radius:8px;padding:16px;margin-bottom:12px;position:relative;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.08em;color:#C85A1A;margin-bottom:8px;">RECOMMENDED MESSAGE</div>
+        <div style="font-size:14px;line-height:1.6;color:#111;">Ariat: Jake, we've missed you! New western boots just dropped + your 20% off is still waiting &#8594; ariat.com/insider Code: INSIDER20</div>
+        <div style="margin-top:10px;display:flex;gap:6px;">
+          <span style="font-size:10px;background:#fff;border:1px solid #ddd;padding:2px 8px;border-radius:3px;color:#888;">162 chars</span>
+          <span style="font-size:10px;background:#fff;border:1px solid #ddd;padding:2px 8px;border-radius:3px;color:#888;">1 segment</span>
+          <span style="font-size:10px;background:#e8f5e8;border:1px solid #b4dfc4;padding:2px 8px;border-radius:3px;color:#1a6a3a;">&#10003; Compliant</span>
+        </div>
+      </div>
+
+      <!-- Alternative -->
+      <div style="background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:16px;margin-bottom:12px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.08em;color:#888;margin-bottom:8px;">ALTERNATIVE</div>
+        <div style="font-size:14px;line-height:1.6;color:#111;">Ariat: Hey Jake! Your Insider status is still active. New boots in your size are here &#8594; ariat.com/insider Code: INSIDER20</div>
+        <div style="margin-top:10px;display:flex;gap:6px;">
+          <span style="font-size:10px;background:#fff;border:1px solid #ddd;padding:2px 8px;border-radius:3px;color:#888;">148 chars</span>
+          <span style="font-size:10px;background:#fff;border:1px solid #ddd;padding:2px 8px;border-radius:3px;color:#888;">1 segment</span>
+          <span style="font-size:10px;background:#e8f5e8;border:1px solid #b4dfc4;padding:2px 8px;border-radius:3px;color:#1a6a3a;">&#10003; Compliant</span>
+        </div>
+      </div>
+
+      <div style="font-size:11px;color:#888;line-height:1.5;"><strong>Why this copy:</strong> Merkury resolved Jake as a lapsed Insider with western boot affinity. AI generated personalized urgency copy using his name, loyalty status, and discount code.</div>
+    </div>
+
+    <!-- Phone Preview -->
+    <div style="padding:20px 24px;border-bottom:1px solid #e8e8e8;text-align:center;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#888;margin-bottom:12px;">DEVICE PREVIEW</div>
+      <div style="max-width:280px;margin:0 auto;background:#f0f0f0;border-radius:20px;padding:16px 14px;">
+        <div style="background:#e8e8e8;border-radius:12px;padding:2px 8px;font-size:10px;color:#888;display:inline-block;margin-bottom:10px;">Today 2:34 PM</div>
+        <div style="background:#fff;border-radius:16px;padding:12px 14px;text-align:left;font-size:13px;line-height:1.5;color:#111;box-shadow:0 1px 3px rgba(0,0,0,.08);">
+          Ariat: Jake, we've missed you! New western boots just dropped + your 20% off is still waiting &#8594; ariat.com/insider Code: INSIDER20
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="padding:16px 24px;display:flex;align-items:center;justify-content:space-between;">
+      <div style="font-size:11px;color:#888;">Sending to <strong>3,847 subscribers</strong></div>
+      <button onclick="closeCampaignModal()" style="background:#111;color:#fff;border:none;padding:10px 24px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;font-family:inherit;">Send Campaign</button>
+    </div>
   </div>
 </div>
 
@@ -1190,7 +1243,7 @@ footer{background:#fff;padding:40px 0 0;}
           <button class="ps-int-tab-btn" style="background:rgba(26,95,106,.15);color:#7ad8e0;" onclick="openOfferLightbox()"><span class="ps-int-icon">&#11088;</span>VIP Insider Offer</button>
         </div>
         <div id="int-btn-jennifer" style="display:none;">
-          <button class="ps-int-tab-btn sms" onclick="openCampaignModal()"><span class="ps-int-icon">📱</span>SMS Re-engagement</button>
+          <button class="ps-int-tab-btn sms" onclick="openCampaignModal()"><span class="ps-int-icon">📱</span>Attentive — SMS Re-engagement</button>
           <button class="ps-int-tab-btn email" onclick="openJenniferEmailModal()"><span class="ps-int-icon">📧</span>Bluecore — Win-back Email</button>
           <button class="ps-int-tab-btn" style="background:rgba(107,124,74,.15);color:#b8cc88;" onclick="openOfferLightbox()"><span class="ps-int-icon">🏷️</span>On-site Offer — 20% Off</button>
         </div>
@@ -1625,7 +1678,7 @@ var CONTENT={
 
 var MODALS={
   maya:{headerBg:'linear-gradient(135deg,#C85A1A,#1a3a3a)',visitorState:'Authenticated — VIP Insider',tagline:'Sarah K. — VIP Insider — Nashville, TN',matchBadge:'Deterministic Match — Confidence 1',matchType:'Deterministic',matchClass:'det',confidence:'1 — Highest',offerBg:'#111',offerHeader:'SARAH &#8212; VIP INSIDER',offerHeadline:'VIP early access is yours.',offerDesc:'As a VIP Insider, your 15% off is auto-applied. First look at the Spring Western Collection before it opens to everyone else.',offerCode:'SARAHVIP15'},
-  jennifer:{headerBg:'linear-gradient(135deg,#111,#1a1a1a)',visitorState:'Deterministic — Lapsed Insider',tagline:'Jake M. — Lapsed Insider — Denver, CO',matchBadge:'Deterministic Match — Confidence 2',matchType:'Deterministic',matchClass:'det',confidence:'2 — High',offerBg:'#111',offerHeader:'JAKE &#8212; LAPSED INSIDER',offerHeadline:'Jake, your 20% off is waiting.',offerDesc:'Your Ariat Insider status is still active and your 20% off welcome-back discount is ready to use. We have new western boots we think you will love.',offerCode:'INSIDER20'},
+  jennifer:{headerBg:'linear-gradient(135deg,#111,#1a1a1a)',visitorState:'Resolved via Merkury — Lapsed Insider',tagline:'Jake M. — Lapsed Insider — Denver, CO',matchBadge:'Deterministic Match — Confidence 2',matchType:'Deterministic',matchClass:'det',confidence:'2 — High',offerBg:'#111',offerHeader:'JAKE &#8212; LAPSED INSIDER',offerHeadline:'Jake, your 20% off is waiting.',offerDesc:'Your Ariat Insider status is still active and your 20% off welcome-back discount is ready to use. We have new western boots we think you will love.',offerCode:'INSIDER20'},
   danielle:{headerBg:'linear-gradient(135deg,#2a1a0a,#3a2a1a)',visitorState:'Probabilistic — New Prospect',tagline:'Caitlin R. — Prospective Buyer — Dallas, TX',matchBadge:'Probabilistic Match — Confidence 4',matchType:'Probabilistic',matchClass:'prob',confidence:'4',offerBg:'#111',offerHeader:'NEW TO ARIAT?',offerHeadline:'Your first boots, 10% off.',offerDesc:'Western boots built to last. Sign up for Ariat Insider and unlock 10% off your first order. Start earning points from day one.',offerCode:'NEWRIDER10'}
 };
 
@@ -1646,7 +1699,7 @@ var PRODUCTS={
 var PERSONAS=[
   {key:'def',name:'Default View',title:'Anonymous \u2014 no identity match',avatar:'\u{1F30E}',bg:'#f0ece8',tags:[{l:'No Match',c:'nomatch'}]},
   {key:'maya',name:'Sarah K.',title:'VIP Insider \u00B7 Authenticated \u00B7 Nashville, TN',avatar:'\u2B50',bg:'#fff8f0',tags:[{l:'Equestrian',c:'segment'},{l:'VIP Insider',c:'auth'}]},
-  {key:'jennifer',name:'Jake M.',title:'Lapsed Insider \u00B7 Probabilistic \u00B7 Denver, CO',avatar:'\u{1F97E}',bg:'#f0f0ff',tags:[{l:'Ranch Pro',c:'segment'},{l:'Lapsed Insider',c:'unauth'}]},
+  {key:'jennifer',name:'Jake M.',title:'Lapsed Insider \u00B7 Deterministic \u00B7 Denver, CO',avatar:'\u{1F97E}',bg:'#f0f0ff',tags:[{l:'Ranch Pro',c:'segment'},{l:'Lapsed Insider',c:'unauth'}]},
   {key:'danielle',name:'Caitlin R.',title:'Prospective Buyer \u00B7 Probabilistic \u00B7 Dallas, TX',avatar:'\u{1F920}',bg:'#fff8f0',tags:[{l:'Western Enthusiast',c:'segment'},{l:'Probabilistic',c:'prob'}]}
 ];
 
@@ -2140,17 +2193,17 @@ function toggleMegaNav(){/* mega nav removed */}
 function closeMegaNav(){megaNavOpen=false;}
 document.addEventListener('click',function(e){if(!e.target.closest('.main-nav')&&!e.target.closest('#mega-nav-new'))closeMegaNav();});
 
-function setCmTone(btn,tone){document.querySelectorAll('.cm-tone-pill').forEach(function(p){p.classList.remove('active');});btn.classList.add('active');cmActiveTone=tone;var v=CM_COPY[tone]||CM_COPY['urgent'];var t0=document.getElementById('cv-text-0');if(t0)t0.textContent=v[0];var t1=document.getElementById('cv-text-1');if(t1)t1.textContent=v[1];updatePhonePreview();}
-function selectVariant(el,idx){cmActiveVariant=idx;document.querySelectorAll('.cm-variant').forEach(function(v){v.classList.remove('active');});el.classList.add('active');updatePhonePreview();}
-function updatePhonePreview(){var v=CM_COPY[cmActiveTone]||CM_COPY['urgent'];var t=v[cmActiveVariant]||v[0];var p=document.getElementById('cm-phone-preview');if(p)p.textContent=t;}
-function selectSendTime(idx){[0,1].forEach(function(n){var r=document.getElementById('cm-st-'+n);if(r)r.classList.toggle('selected',n===idx);});}
+function setCmTone(){}
+function selectVariant(){}
+function updatePhonePreview(){}
+function selectSendTime(){}
 
 function buildPersonaList(){
   var list=document.getElementById('ps-persona-list');if(!list)return;list.innerHTML='';
   PERSONAS.forEach(function(p){
-    var tags=p.tags.map(function(t){return '<span class="ps-tag '+t.c+'">'+t.l+'</span>';}).join('');
     var el=document.createElement('div');el.className='ps-persona'+(p.key===activeKey?' active':'');el.setAttribute('data-key',p.key);
-    el.innerHTML='<div class="ps-persona-avatar" style="background:'+p.bg+'">'+p.avatar+'</div><div class="ps-persona-info"><div class="ps-persona-name">'+p.name+'</div><div class="ps-persona-title">'+p.title+'</div><div class="ps-persona-tags">'+tags+'</div></div><span class="ps-persona-check">&#10003;</span>';
+    var tags=p.tags.map(function(t){return '<span class="ps-tag '+t.c+'">'+t.l+'</span>';}).join('');
+    el.innerHTML='<div class="ps-avatar" style="background:'+p.bg+'">'+p.avatar+'</div><div class="ps-info"><div class="ps-name">'+p.name+'</div><div class="ps-title">'+p.title+'</div><div class="ps-tags">'+tags+'</div></div>'+(p.key===activeKey?'<div class="ps-check">&#10003;</div>':'');
     el.addEventListener('click',function(){applyPersona(p.key);});list.appendChild(el);
   });
 }
